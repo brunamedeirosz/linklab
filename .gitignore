@@ -1,0 +1,41 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+db.sqlite3
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.sqlite3-*
+.coverage
+htmlcov/
+
+# Node / React
+node_modules/
+dist/
+.vite/
+
+# Editores e sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache do npm
+.npm-cache/
+.npm/
+
+# Resultados de testes e arquivos locais
+coverage/
+test-results/
+playwright-report/
+*.tmp
+*.bak
+.codex/
+.agents/
+.aws/
