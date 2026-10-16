@@ -90,7 +90,7 @@ git log -5 --oneline
 
 ## Revisão antes dos commits
 
-- Reexecutar testes, lint, build e integração usando os comandos do README.
+- Reexecutar testes, lint, build e integração usando os comandos do [guia técnico](GUIA_TECNICO.md).
 - Conferir se os exemplos `.env.example` e o lockfile aparecem entre os arquivos a incluir.
 - Conferir se `.env`, bancos, `.venv`, `node_modules`, caches e builds estão ignorados.
 - Verificar a identidade Git usada para autoria e escolher conscientemente o endereço de e-mail que aparecerá nos commits. É possível usar o endereço privado fornecido pelo GitHub nas configurações da conta.
@@ -116,4 +116,4 @@ Se a verificação com PostgreSQL ou o build no GitHub falhar, corrigir a causa 
 
 ## Licença
 
-A MIT é uma opção a avaliar para permitir reutilização com preservação dos avisos de autoria e licença. A aplicação depende de confirmação explícita da autora. A escolha e o texto estão discutidos no [README](../README.md#licença).
+A MIT é uma opção a avaliar para permitir reutilização com preservação dos avisos de autoria e licença. A aplicação depende de confirmação explícita da autora. Nenhuma licença foi aplicada ao projeto.

@@ -71,10 +71,10 @@ O download de bibliotecas adicionais de teste de interface foi recusado pelo con
 
 ## Roteiro de revisão manual
 
-1. Inicie backend e frontend conforme o README e abra `http://localhost:5173`.
+1. Inicie backend e frontend conforme o [guia técnico](GUIA_TECNICO.md) e abra `http://localhost:5173`.
 2. Crie um link para `https://example.com/caminho-de-exemplo` e confira que o resultado substitui o formulário e recebe foco.
 3. Use o botão de cópia, cole o resultado em um campo de texto e confirme o endereço.
-4. Abra o link curto em outra aba e confira o redirecionamento. O contador pode ser consultado pela API, conforme o README; não aparece na interface.
+4. Abra o link curto em outra aba e confira o redirecionamento. O contador pode ser consultado pela API, conforme o guia técnico; não aparece na interface.
 5. Use **Encurtar outro** e confirme que o formulário reaparece com campo vazio e foco para digitar.
 6. Teste URL incompleta e `ftp://example.com`; a criação deve ser impedida ou retornar mensagem clara.
 7. Pare o backend, tente criar um link e confira o tratamento da falha; depois reinicie-o.
@@ -86,4 +86,4 @@ O download de bibliotecas adicionais de teste de interface foi recusado pelo con
 
 Revise `git status --short --untracked-files=all` e confirme que nenhum arquivo privado aparece. O `.gitignore` não remove segredos de um histórico já existente. Nesta revisão, `git ls-files` estava vazio, e não foram feitos staging, commits, configuração de remoto ou push.
 
-A publicação e a aplicação de uma licença continuam dependendo da autorização da autora. As instruções de execução e os passos de revisão estão no [README](../README.md).
+A publicação de atualizações e a aplicação de uma licença dependem da autorização da autora. As instruções de execução estão no [guia técnico](GUIA_TECNICO.md).

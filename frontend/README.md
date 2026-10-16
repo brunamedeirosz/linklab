@@ -1,6 +1,6 @@
 ﻿# Frontend LinkLab
 
-Interface React/JSX e Vite. Veja a documentação completa no [README da raiz](../README.md).
+Interface React/JSX e Vite. Veja a [apresentação do projeto](../README.md) e o [guia técnico](../docs/GUIA_TECNICO.md).
 
 ```powershell
 npm ci
