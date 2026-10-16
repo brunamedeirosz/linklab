@@ -1,6 +1,6 @@
 # LinkLab
 
-**Menos URL. Mais conexão.** Um encurtador de URLs Full Stack com React e Django REST Framework, desenvolvido como projeto de portfólio para demonstrar integração de APIs REST, persistência SQL e testes automatizados.
+**Menos URL. Mais possibilidades.** Um encurtador de URLs Full Stack com React e Django REST Framework, desenvolvido como projeto de portfólio para demonstrar integração de APIs REST, persistência SQL e testes automatizados.
 
 O projeto funciona localmente. Não existe uma instância pública hospedada: os links gerados dependem do servidor local e do banco em que foram criados.
 
@@ -10,8 +10,9 @@ O projeto funciona localmente. Não existe uma instância pública hospedada: os
 - Validação de endereços HTTP/HTTPS de até 2.048 caracteres; esquemas perigosos e URLs com credenciais são rejeitados.
 - Unicidade no banco, novas tentativas em colisões e proteção de nomes reservados.
 - Redirecionamento HTTP 302 e incremento atômico de acessos com `F()`.
-- Estatísticas com URL original, código, data de criação e quantidade de acessos.
-- Interface responsiva com carregamento, erros, cópia, confirmação e atualização manual das estatísticas.
+- Estatísticas com URL original, código, data de criação e quantidade de acessos, disponíveis pela API.
+- Interface responsiva em índigo e verde-sálvia, com carregamento, mensagens de erro e foco em criar e copiar links.
+- O resultado substitui o formulário, com confirmação de cópia e opção de encurtar outro link.
 - Labels, foco visível, navegação por teclado e mensagens acessíveis.
 - Limites básicos por IP: 20 criações/minuto e 120 consultas de estatísticas/minuto.
 - SQLite na execução local; PostgreSQL com volume persistente no Docker Compose.
@@ -249,6 +250,7 @@ Resultados da validação e roteiro de revisão manual: [docs/VALIDACAO.md](docs
 ## Limitações conhecidas
 
 - Sem hospedagem pública: links `localhost` não funcionam como links públicos nem apontam para seu computador quando abertos em outro dispositivo.
+- URLs que já são pequenas podem gerar um link maior, pois o endereço final inclui a origem local, a porta e o código.
 - O contador mede requisições GET recebidas, incluindo visitas repetidas e bots; não representa pessoas únicas.
 - O throttle usa cache em memória por processo, reinicia com o servidor e não garante um limite estrito sob concorrência. Pelo proxy Vite, os clientes compartilham o IP do proxy. Os redirecionamentos não são limitados.
 - SQLite pode bloquear escritas simultâneas; para explorar concorrência, use PostgreSQL.

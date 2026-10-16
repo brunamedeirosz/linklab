@@ -18,7 +18,7 @@ Principais pontos encontrados e tratados:
 | Estatísticas não devolviam short_url | Representação única no serializer para criação e consulta |
 | Redirecionamento aceitava métodos impróprios | GET/HEAD; apenas GET incrementa; resposta sem cache |
 | Não havia proteção explícita de rotas reservadas | Rejeição de códigos reservados antes de gravar |
-| Frontend sem estatísticas e labels | Consulta/atualização, contador, data, foco e mensagens acessíveis |
+| Interface com acessibilidade incompleta | Labels, foco visível, cópia e confirmação acessíveis; estatísticas mantidas na API |
 | Erros de rede e respostas inválidas pouco claros | Cliente da API centralizado com mensagens específicas |
 | Testes Python eram apenas o arquivo padrão | Suíte de API e teste PostgreSQL de acessos simultâneos |
 | Faltavam configuração reproduzível e documentação | Requirements, Dockerfiles, Compose, exemplos de ambiente e README |
@@ -69,10 +69,10 @@ O download de bibliotecas adicionais de teste de interface foi recusado pelo con
 ## Roteiro de revisão manual
 
 1. Inicie backend e frontend conforme o README e abra `http://localhost:5173`.
-2. Crie um link para `https://example.com/caminho-de-exemplo`, confira que o resultado substitui o formul?rio e recebe foco.
+2. Crie um link para `https://example.com/caminho-de-exemplo` e confira que o resultado substitui o formulário e recebe foco.
 3. Use o botão de cópia, cole o resultado em um campo de texto e confirme o endereço.
-4. Abra o link curto em outra aba; volte e use **Atualizar estatísticas**. O contador deve aumentar.
-5. Use **Encurtar outro link** e confirme que o campo fica disponível e recebe foco.
+4. Abra o link curto em outra aba e confira o redirecionamento. O contador pode ser consultado pela API, conforme o README; não aparece na interface.
+5. Use **Encurtar outro** e confirme que o formulário reaparece com campo vazio e foco para digitar.
 6. Teste URL incompleta e `ftp://example.com`; a criação deve ser impedida ou retornar mensagem clara.
 7. Pare o backend, tente criar um link e confira o tratamento da falha; depois reinicie-o.
 8. Navegue com Tab e Shift+Tab; verifique labels, foco visível e mensagens. Teste Enter para enviar o formulário.
