@@ -121,6 +121,11 @@ function App() {
 
       </main>
 
+      <footer className="footer">
+        <p><span className="footer-brand">LinkLab</span><span className="footer-divider" aria-hidden="true">·</span>Desenvolvido por <a href="https://github.com/brunamedeirosz" target="_blank" rel="noreferrer">Bruna Medeiros</a></p>
+        <a className="footer-repository" href="https://github.com/brunamedeirosz/linklab" target="_blank" rel="noreferrer">Ver projeto no GitHub <span aria-hidden="true">↗</span></a>
+      </footer>
+
     </div>
   )
 }
