@@ -1,0 +1,70 @@
+.app-shell { min-height: 100svh; overflow: clip; }
+.header, .hero { width: min(1180px, calc(100% - 80px)); margin-inline: auto; }
+.header { min-height: 96px; display: flex; align-items: center; border-bottom: 1px solid var(--line); }
+.logo { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration: none; font-family: var(--font-display); font-size: 29px; font-weight: 800; letter-spacing: -1.4px; }
+.logo-accent { color: var(--sage); }
+.hero { min-height: calc(100svh - 96px); text-align: center; padding: 42px 0 64px; display: flex; flex-direction: column; align-items: center; }
+h1 { max-width: 100%; font-family: var(--font-display); font-size: clamp(44px, 5vw, 65px); line-height: 1.14; letter-spacing: -2.7px; font-weight: 800; margin: 22px 0 25px; }
+h1 > span { color: var(--sage); }
+.hero-description { color: var(--muted); font-size: 16px; line-height: 1.8; max-width: 480px; text-wrap: pretty; margin: 0; }
+.hero-description mark { color: var(--ink); font-weight: 600; background: linear-gradient(transparent 22%, #e2efbf 22%, #e2efbf 92%, transparent 92%); padding: 0 .18em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.shortener { width: min(100%, 720px); margin-top: 35px; scroll-margin-top: 36px; }
+.input-row { position: relative; display: flex; align-items: center; gap: 10px; padding: 8px; border: 1px solid #ccd7c5; border-radius: 17px; background: var(--surface); box-shadow: 0 3px 10px #5750a30a, 0 12px 36px #5750a314; transition: border-color .18s, box-shadow .18s; }
+.input-row:focus-within { border-color: #8b84bf; box-shadow: 0 0 0 4px #7770bb14, 0 12px 36px #5750a31f; }
+.input-icon { color: #827da2; position: absolute; top: 21px; left: 22px; font-size: 22px; line-height: 24px; pointer-events: none; }
+input { flex: 1; min-width: 0; width: 100%; min-height: 52px; padding: 15px 12px 15px 37px; border: 0; border-radius: 9px; color: var(--ink); background: transparent; font-size: 14px; outline-offset: -2px; }
+input::placeholder { color: #697462; opacity: 1; }
+input:disabled { color: #65725f; }
+button { border: 0; border-radius: 10px; font-weight: 650; }
+.primary { padding: 15px 22px; min-width: 156px; min-height: 52px; border: 1px solid #3d3c5f; border-radius: 9px; background: #494867; color: #fff; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 10px; white-space: nowrap; }
+.primary:hover:not(:disabled) { background: #3d3c5a; border-color: #33324d; }
+.primary:active:not(:disabled) { transform: translateY(1px); background: #33324d; }
+.primary:disabled { opacity: .8; box-shadow: none; }
+.field-help { font-size: 12px; color: var(--muted); margin: 14px 0 0; line-height: 1.8; }
+.field-help > span { margin-left: 8px; }
+.error { color: #a33025; border: 1px solid #efd3cd; border-radius: 11px; padding: 13px 17px; background: #fff2ef; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; text-align: left; }
+.result { text-align: left; background: var(--surface); border: 1px solid var(--line); border-radius: 17px; padding: 25px; box-shadow: 0 8px 28px #283f2b05; }
+.result-heading { margin-bottom: 17px; }
+.result h3 { display: flex; align-items: center; gap: 10px; font-size: 16px; line-height: 1.5; font-weight: 600; margin: 0; }
+.success-mark { flex-shrink: 0; background: #edf3e3; border-radius: 50%; display: grid; place-items: center; color: #47643a; width: 26px; height: 26px; font-size: 13px; }
+.short-link-row { display: flex; align-items: center; gap: 15px; background: #f2f5ec; border-radius: 10px; padding: 10px 10px 10px 16px; }
+.short-link-row > a { flex: 1; min-width: 0; overflow-wrap: anywhere; color: var(--accent); font: 14px/1.7 ui-monospace, Consolas, monospace; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.copy-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-width: 140px; min-height: 48px; padding: 12px 17px; background: var(--accent); color: #fff; font-size: 14px; white-space: nowrap; }
+.copy-icon { width: 17px; height: 17px; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.copy-button:hover { background: var(--accent-hover); }
+.copy-button.is-copied { background: #dfebcc; color: var(--accent); }
+.result-actions { margin-top: 12px; display: flex; justify-content: flex-end; }
+.text-button { min-height: 44px; background: none; color: var(--accent); padding: 10px 0 10px 12px; font-size: 13px; }
+.text-button:hover { color: var(--accent-hover); text-decoration: underline; text-underline-offset: 4px; }
+.skip-link { position: absolute; top: 8px; left: -9999px; }
+.skip-link:focus { left: 12px; padding: 12px; background: var(--surface); z-index: 10; }
+.spinner { border: 2px solid #ffffff55; border-top-color: #fff; width: 16px; height: 16px; border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (min-width: 1500px) { .hero { padding-top: 56px; } }
+@media (max-width: 760px) {
+  .header, .hero { width: calc(100% - 40px); }
+  .header { min-height: 80px; }
+  .logo { font-size: 25px; }
+  .hero { padding: 26px 0 38px; min-height: calc(100svh - 80px); }
+  h1 { font-size: clamp(37px, 7.5vw, 55px); letter-spacing: -1.8px; margin-top: 22px; }
+  .hero-description { font-size: 15px; max-width: 480px; }
+  .shortener { margin-top: 29px; }
+  .primary { padding-inline: 17px; gap: 10px; font-size: 13px; }
+  input { font-size: 16px; }
+}
+@media (max-width: 480px) {
+  .hero { padding-top: 18px; }
+  h1 { font-size: clamp(33px, 8.5vw, 41px); letter-spacing: -1.4px; }
+  .hero-description { font-size: 14px; max-width: 290px; }
+  .input-row { flex-wrap: wrap; padding: 7px; border-radius: 15px; gap: 7px; }
+  input { flex-basis: 100%; padding-block: 16px; font-size: 16px; }
+  .input-icon { top: 19px; }
+  .primary { width: 100%; min-height: 52px; font-size: 14px; }
+  .field-help { font-size: 11px; }
+  .field-help > span { display: block; margin-left: 0; }
+  .result { padding: 20px 16px; }
+  .result h3 { font-size: 15px; }
+  .short-link-row { flex-wrap: wrap; gap: 12px; padding: 13px; }
+  .short-link-row > a { flex-basis: 100%; font-size: 13px; }
+  .copy-button { width: 100%; }
+}
