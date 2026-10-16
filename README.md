@@ -6,7 +6,7 @@ Encurtador de URLs com uma experiência direta: cole um endereço, gere seu link
 
 Projeto Full Stack de portfólio, desenvolvido com **Python, Django REST Framework e React**, conectando interface, API REST e persistência de dados.
 
-![Tela inicial do LinkLab](docs/screenshots/inicio.png)
+![Tela inicial do LinkLab com conteúdo centralizado e rodapé](docs/screenshots/inicio.png?v=20261016)
 
 ## Uma experiência simples
 
@@ -19,13 +19,13 @@ A interface também conta com indicador de carregamento, mensagens de erro, labe
 
 ## O resultado
 
-![Resultado do encurtamento, com opções de copiar e criar outro link](docs/screenshots/resultado.png)
+![Resultado do encurtamento, com opções de copiar e criar outro link](docs/screenshots/resultado.png?v=20261016)
 
 <details>
 <summary><strong>Veja a versão para celular</strong></summary>
 
 <br />
-<img src="docs/screenshots/celular.png" alt="Tela inicial do LinkLab em um celular" width="320" />
+<img src="docs/screenshots/celular.png?v=20261016" alt="Tela inicial do LinkLab em um celular, com conteúdo centralizado e rodapé" width="320" />
 
 </details>
 
