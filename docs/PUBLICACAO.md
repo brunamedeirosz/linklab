@@ -18,12 +18,13 @@ O projeto tem execução local. Não apresentar os links como compartilháveis p
 
 ## Imagens para o README
 
-O ideal é incluir duas capturas reais, com a mesma largura:
+O README inclui capturas reais da aplicação:
 
 1. Tela inicial com a interface final clara, o título e o formulário.
 2. Resultado de um endereço longo de exemplo, com o botão de cópia.
+3. Tela inicial em viewport de celular de 390 × 844.
 
-Salvar em `docs/screenshots/inicio.png` e `docs/screenshots/resultado.png`. Usar dados de exemplo e recortar abas e informações pessoais. As imagens devem mostrar a implementação real; ainda não foram criadas nem vinculadas ao README.
+As imagens estão em `docs/screenshots/inicio.png`, `docs/screenshots/resultado.png` e `docs/screenshots/celular.png`, vinculadas ao README. Foram capturadas no Chrome com banco temporário e dados de exemplo, sem abas, credenciais ou informações pessoais. Para atualizar, usar a interface real e preservar a mesma identidade visual e proporções.
 
 ## Organização proposta dos commits
 

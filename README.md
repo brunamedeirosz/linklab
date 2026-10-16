@@ -4,6 +4,8 @@
 
 O projeto funciona localmente. Não existe uma instância pública hospedada: os links gerados dependem do servidor local e do banco em que foram criados.
 
+![Tela inicial do LinkLab com formulário para encurtar URLs](docs/screenshots/inicio.png)
+
 ## Funcionalidades
 
 - Criação de links com códigos aleatórios de sete caracteres usando `secrets`.
@@ -259,11 +261,19 @@ Resultados da validação e roteiro de revisão manual: [docs/VALIDACAO.md](docs
 - Não há expiração, exclusão ou lista de links na interface.
 - A cópia depende da Clipboard API; se falhar, a interface orienta a copiar manualmente.
 - A chave temporária de desenvolvimento muda ao reiniciar o processo; sessões administrativas podem ser invalidadas. Configure uma chave estável se precisar delas.
-- Docker, PostgreSQL, CI no GitHub e revisão visual/interação em navegador precisam de validação no ambiente correspondente.
+- Docker, PostgreSQL e o resultado do CI no GitHub ainda precisam de validação. As capturas e o fluxo de criação/reinício foram conferidos no Chrome; a revisão manual completa de teclado, cópia e dispositivos reais continua pendente.
 
 ## Capturas de tela
 
-Ainda não há uma captura validada da interface. Para adicionar uma ao portfólio, execute o projeto, crie um link com um endereço de exemplo e salve a imagem em `docs/screenshots/`. Evite incluir dados privados ou credenciais.
+Capturas reais do Chrome com a aplicação executando localmente, usando um banco temporário e uma URL de exemplo. As imagens de desktop têm resolução de 1.440 × 900; a versão de celular foi capturada em uma viewport de 390 × 844.
+
+**Resultado de um link criado:**
+
+![Link criado no LinkLab com botões de copiar e encurtar outro](docs/screenshots/resultado.png)
+
+**Interface em tela de celular:**
+
+<img src="docs/screenshots/celular.png" alt="Formulário do LinkLab em tela estreita, com botão abaixo do campo" width="320" />
 
 ## Melhorias futuras
 

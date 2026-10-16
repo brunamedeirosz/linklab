@@ -50,6 +50,9 @@ A interface final prioriza colar, encurtar e copiar. Acessos e datas continuam d
 | `npm run lint` | Concluído sem erros |
 | `npm run build` | Bundle gerado com sucesso |
 | `scripts/smoke_test.py` | Página Vite, criação pelo proxy, HTTP 302 e estatísticas com 1 acesso aprovados |
+| Chrome com interface real | Criação por formulário, substituição pelo resultado, foco no título e reinício com foco no campo aprovados |
+| Viewport de celular de 390 × 844 | Largura de conteúdo de 390 px, sem rolagem horizontal; captura inspecionada |
+| Capturas de tela | Inicial e resultado em 1.440 × 900; celular em 390 × 844, com banco temporário e perfil de navegador isolado |
 | Git | Git 2.56.0 disponível; nenhum arquivo versionado na revisão |
 | Regras de exclusão do Git | SQLite, ambiente virtual, node_modules, dist, cache e resultados de teste ignorados; exemplos de ambiente e lockfile disponíveis para inclusão |
 
@@ -61,8 +64,8 @@ O download de bibliotecas adicionais de teste de interface foi recusado pelo con
 
 - **Docker Compose e PostgreSQL:** Docker não está disponível no terminal. Dockerfiles, Compose e a conexão PostgreSQL foram preparados, mas não executados aqui. A aprovação dos testes com SQLite não valida PostgreSQL.
 - **Concorrência real:** o teste usa vinte redirecionamentos com cinco threads e conexões independentes; só é executado com PostgreSQL. Execute `docker compose exec backend python manage.py test` quando o Compose estiver ativo.
-- **GitHub Actions:** workflow criado para SQLite, PostgreSQL e frontend; nenhuma execução remota ocorreu.
-- **Navegador:** build e integração HTTP passaram, mas layout, teclado, cópia e comportamento visual ainda precisam da revisão manual abaixo. Não há screenshot validada.
+- **GitHub Actions:** workflow publicado para SQLite, PostgreSQL e frontend; resultados remotos ainda não consultados nesta validação.
+- **Navegador:** capturas reais inspecionadas em desktop e viewport de celular; criação, resultado, foco e reinício verificados no Chrome. A cópia para a área de transferência, navegação completa por teclado e dispositivos físicos ainda precisam de revisão manual.
 - **Instalação limpa:** foram verificadas as dependências já instaladas e seus metadados; não foi feita uma reinstalação completa em uma máquina limpa.
 - **Licença:** aguarda escolha da autora; nenhum arquivo `LICENSE` foi criado.
 
